@@ -13,7 +13,7 @@ const App = () => {
 
   return (
     <div>
-      
+      <form></form>
       <div className = "signup-form" style={{display: "flex", flexDirection: "column", alignItems: "center"}} >
         <h1>Signup Form</h1>
         <div>
