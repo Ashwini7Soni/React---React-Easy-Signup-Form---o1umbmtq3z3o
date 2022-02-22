@@ -12,7 +12,7 @@ const App = () => {
   const [error, setError] = useState({});
 
   return (
-    <div className = "signup-form" style={{display: "flex", flexDirection: "column", alignItems: "center"}}>
+    <form className = "signup-form" style={{display: "flex", flexDirection: "column", alignItems: "center"}}>
       <h1>Signup Form</h1>
       <div>
         <label>Name : </label>
@@ -41,12 +41,12 @@ const App = () => {
           setConsent(prev => !prev);
         }} style = {{marginBottom: "0.8rem"}}/>
       </div>
-      <button onClick={() => {
+      <button type = "submit" onClick={() => {
         const errObj = signUpFormValidation({name: name, email: email, password: password});
         setError(errObj);
         console.log(errObj);
       }}>Signup</button>
-    </div>
+    </form>
   );
 }
 
